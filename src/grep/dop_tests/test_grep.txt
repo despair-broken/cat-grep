@@ -1,0 +1,11 @@
+Hello World
+This is a test file for grep.
+Grep is a powerful command-line utility.
+It can search for specific patterns in files.
+This file contains multiple lines of text.
+Some lines are repeated.
+Hello World
+This is another line.
+Grep can also ignore case with the -i flag.
+Searching for patterns is easy with grep.
+This line is here to test the -v flag.

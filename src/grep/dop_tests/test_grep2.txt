@@ -1,0 +1,5 @@
+This is a test line.
+Another test line for grep.
+Grep is useful for searching text.
+This line is here to test the -c flag.
+End of the test file.
