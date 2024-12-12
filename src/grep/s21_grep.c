@@ -89,12 +89,12 @@ void output(arguments arg, int argc, char **argv) {
   int error = regcomp(&re, arg.pattern, REG_EXTENDED | arg.i);
   if (error) {
     perror("Error compiling regex");
-    return;
-  }
-  for (int i = optind; i < argc; i++) {
-    processfile(arg, argv[i], &re);
-  }
-  regfree(&re);
+  } else {
+    for (int i = optind; i < argc; i++) {
+      processfile(arg, argv[i], &re);
+    }
+    regfree(&re);
+  };
 }
 
 void processfile(arguments arg, char *path, regex_t *reg) {
@@ -145,7 +145,7 @@ void print_mat(regex_t *re, char *line) {
     putchar('\n');
     off += match.rm_eo;
   }
-  if (res == 0) {
+  if (res != 0) {
     fprintf(stderr, "Error executing regex: %d\n", res);
   }
 }

@@ -15,5 +15,5 @@ void flag_s(int ch, int *empty_ch);
 void flag_n(int pre_che, int *empty_ch, int *line_count);
 void flag_b(int pre_che, int ch, int *line_count);
 int flag_v(int ch);
-void flag_E(int ch, int pre_che, int *empty_ch, int b);
+void flag_E(int pre_che, int ch, int *empty_ch, int b);
 int flag_T(int ch);

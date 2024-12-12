@@ -8,9 +8,9 @@ DIFF=""
 all_flags=("-e" "-i" "-v" "-c" "-l" "-n")
 bonus_flag=("-i" "-v" "-c" "-l" "-n")
 dop_flags=("-iv" "-vi" "-ci" "-ic" "-in" "-ni" "-il" "-li" "-vc" "-cv" "-vl" "-lv" "-vn" "-nv" "-cl" "-lc" "-cn" "-nc" "-ln" "-nl")
-f_pat=("test/pattern_1.txt" "test/pattern_2.txt")
+f_pat=("pattern_1.txt" "pattern_2.txt")
 patterns=("Depp" "english")
-input_files=("test/test_1.txt" "test/test_2.txt")
+input_files=("test_1.txt" "test_2.txt")
 
 echo " "
 echo " ONE FILES "
@@ -29,11 +29,11 @@ do
             then
                 let "COUNTER++"
                 let "SUCCESS++"
-                echo "\033[92m$COUNTER\033[0m - Success"
+                echo "$COUNTER - Success"
             else 
                 let "COUNTER++"
                 let "FAIL++"
-                echo "\033[31m$FAIL\033[0m - Fail"
+                echo "$FAIL - Fail"
             fi
 
             rm your_output.txt
@@ -63,11 +63,11 @@ do
                     then
                         let "COUNTER++"
                         let "SUCCESS++"
-                        echo "\033[92m$COUNTER\033[0m/ - Success"
+                        echo "$COUNTER - Success"
                     else 
                         let "COUNTER++"
                         let "FAIL++"
-                        echo "\033[91m$COUNTER\033[0m/ - Fail"
+                        echo "$COUNTER - Fail"
                     fi
 
                     rm your_output.txt

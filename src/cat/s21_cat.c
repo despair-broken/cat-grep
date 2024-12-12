@@ -94,7 +94,7 @@ void reader(base_flags my_flags, FILE *f) {
       ch = flag_v(ch);
     }
     if (my_flags.E) {
-      flag_E(ch, pre_che, &empty_ch, my_flags.b);
+      flag_E(pre_che, ch, &empty_ch, my_flags.b);
     }
     if (my_flags.T) {
       ch = flag_T(ch);
@@ -140,7 +140,7 @@ int flag_v(int ch) {
   return ch;
 }
 
-void flag_E(int ch, int pre_che, int *empty_ch, int b) {
+void flag_E(int pre_che, int ch, int *empty_ch, int b) {
   if ((ch == '\n') && (pre_che == '\n') && (b) && (*empty_ch < 3)) {
     printf("      \t");
   }
